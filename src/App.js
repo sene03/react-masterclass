@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+
+const Box = styled.div`
+  background-color: teal;
+  width: 100px;
+  height: 100px;
+`;
+
+const Box2 = styled(Box)`
+  background-color: red;
+`;
+
+const Text = styled.span`
+  color: ${(props) => props.textColor};
+  span {
+    color: blue;
+    &:hover {
+      color: red;
+    }
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Box>
+        <Text textColor="black">
+          asdf
+          <span>this is span</span>
+        </Text>
+      </Box>
+      <Box2></Box2>
+    </>
   );
 }
 
