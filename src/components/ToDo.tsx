@@ -7,7 +7,6 @@ function ToDo({ id, text, category }: IToDo) {
     const {
       currentTarget: { name },
     } = event;
-    console.log(name);
 
     setToDos((toDos) =>
       toDos.map((t) =>
