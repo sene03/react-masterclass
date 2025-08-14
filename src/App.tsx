@@ -8,22 +8,20 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(255, 126, 126, 0.6);
 `;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 50vw;
   gap: 10px;
-  div:first-child,
-  div:last-child {
-    grid-column: span 2;
-  }
+  opacity: 0.6;
 `;
 
 const Box = styled(motion.div)`
   background-color: rgba(255, 255, 255, 1);
-  border-radius: 40px;
+  border-radius: 20px;
   height: 200px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.06);
 `;
